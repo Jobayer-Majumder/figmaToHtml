@@ -1,0 +1,16 @@
+@mixin container() {
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+@mixin buttonBrand {
+    background-color: white;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
