@@ -31,10 +31,13 @@ a {
     padding: 10px 5px;
     background-color: #28293e;
 }
+.header-container{
+    width: 90%;
+    margin: 0 auto;
+}
 
 .nav-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    @include row(3);
 }
 
 .menu-container {
@@ -50,10 +53,13 @@ a {
     }
 }
 
-.contact-btn-container {
+.contact-btn {
     display: flex;
     justify-content: right;
     align-items: center;
+}
+.contact-btn button:last-child{
+    display: none;
 }
 
 .header-button {
@@ -94,10 +100,9 @@ a {
 }
 
 .top-articles {
+    @include row(2);
     padding-bottom: 50px;
-    display: grid;
     gap: 35px;
-    grid-template-columns: repeat(2, 1fr);
     img {
         width: 100%;
     }
@@ -122,10 +127,8 @@ a {
 }
 
 .bottom-articles {
-    // padding: 20px 0;
-    display: grid;
+    @include row(3);
     gap: 35px;
-    grid-template-columns: repeat(3, 1fr);
     img {
         width: 100%;
     }
@@ -150,9 +153,8 @@ a {
 }
 
 .news-letter {
+    @include row(2);
     padding: 40px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
     .news-letter-info {
         display: flex;
@@ -188,10 +190,9 @@ a {
 }
 .contact-container {
     @include container();
+    @include row(2);
     color: #ffffff;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     div:first-child {
         display: flex;
         flex-direction: column;
@@ -215,9 +216,8 @@ a {
 }
 
 .top-footer {
+    @include row(4);
     padding-bottom: 40px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
 
     div h5 {
         padding-bottom: 15px;
@@ -248,14 +248,11 @@ a {
 }
 
 .bottom-footer {
+    @include row(2);
     padding: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
     p {
         color: $text-brand;
     }
-
     div {
         display: flex;
         gap: 30px;
@@ -277,28 +274,29 @@ a {
             display: none;
         }
     }
+    .contact-btn button:first-child{
+        display: none;
+    }
+    .contact-btn button:last-child{
+        display: block;
+    }
     .banner-container {
         text-align: center;
     }
     .top-articles {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        @include row(1);
     }
     .bottom-articles {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        @include row(1);
     }
-
     .news-letter {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        @include row(1);
         h2{
             padding-bottom: 10px;
         }
     }
     .subscribe-form {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        @include row(1);
         input{
             width: 93%;
         }
@@ -321,8 +319,7 @@ a {
         text-align: center;
     }
     .bottom-footer {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        @include row(1);
         p{
             text-align: center;
         }

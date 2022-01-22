@@ -27,6 +27,11 @@ a {
   background-color: #28293e;
 }
 
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+}
+
 .nav-container {
   display: -ms-grid;
   display: grid;
@@ -55,7 +60,7 @@ a {
   text-decoration: underline;
 }
 
-.contact-btn-container {
+.contact-btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,6 +70,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.contact-btn button:last-child {
+  display: none;
 }
 
 .header-button {
@@ -116,12 +125,12 @@ a {
 }
 
 .top-articles {
-  padding-bottom: 50px;
   display: -ms-grid;
   display: grid;
-  gap: 35px;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 50px;
+  gap: 35px;
 }
 
 .top-articles img {
@@ -149,9 +158,9 @@ a {
 .bottom-articles {
   display: -ms-grid;
   display: grid;
-  gap: 35px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
 }
 
 .bottom-articles img {
@@ -177,11 +186,11 @@ a {
 }
 
 .news-letter {
-  padding: 40px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 40px 0;
 }
 
 .news-letter .news-letter-info {
@@ -243,12 +252,12 @@ a {
   width: 90%;
   margin: 0 auto;
   padding: 40px 0;
-  color: #ffffff;
-  padding: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  color: #ffffff;
+  padding: 10px;
 }
 
 .contact-container div:first-child {
@@ -284,11 +293,11 @@ a {
 }
 
 .top-footer {
-  padding-bottom: 40px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  padding-bottom: 40px;
 }
 
 .top-footer div h5 {
@@ -329,11 +338,11 @@ a {
 }
 
 .bottom-footer {
-  padding: 20px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  padding: 20px 0;
 }
 
 .bottom-footer p {
@@ -365,6 +374,12 @@ a {
 @media screen and (max-width: 600px) {
   .menu-container a {
     display: none;
+  }
+  .contact-btn button:first-child {
+    display: none;
+  }
+  .contact-btn button:last-child {
+    display: block;
   }
   .banner-container {
     text-align: center;
